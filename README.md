@@ -123,12 +123,12 @@ This keeps the table academically correct and consistent with your F1-score valu
 * SentenceTransformer (Model: all-MiniLM-L6-v2) + LinearSVC Classifier
 ## Transformer 
 * DistilBERT (Distilbert-base-uncased)
-
+* [Roberta-Fake News Detection](https://huggingface.co/winterForestStump/Roberta-fake-news-detector)
 # Visualization Section 
 
 ![Prediction Distribution](images/prediction_distribution.png)
 <img width="4400" height="2508" alt="revised_prediction_distribution_graph" src="https://github.com/user-attachments/assets/902b558b-709e-44d6-ab87-0a7d89629d58" />
-
-
+![SVC-related Predicted Distributions](images/SVC-related-accuracies.png)
+![Transformer models Accuracies](images/Transformers-accuracyscore.png)
 
 # Conclusions 

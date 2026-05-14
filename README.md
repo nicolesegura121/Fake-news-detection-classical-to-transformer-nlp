@@ -86,6 +86,31 @@ Grid search from Scikit-learn was used to find the best combination of parameter
 |SVC+Qwen3(embedding) | n_grams(1,2), min_df = 3, SVC(C=10,gamma=1, Kernel="linear")| 0.916|0.92 |0.91 |0.92 |
 |SVC+BGEsmallv1.5(embedding) | n_grams(1,2), min_df = 3, SVC(C=10,gamma=1, Kernel="linear")| 0.917|0.92 |0.91 |0.92 |
 |RoBerta-Fake-NewsDetector | Fine Tuned with Trainer| 0.966|0.97 |0.96 |0.97 |
+| Logistic Regression + BoW    | CountVectorizer with BoW features               | 0.927973 | 0.927973 | 0.927973 | 0.927940 |
+| Logistic Regression + TF-IDF | TF-IDF vectorization with n-grams               | 0.925799 | 0.925799 | 0.925799 | 0.925775 |
+| Random Forest + BoW          | Baseline Random Forest classifier               | 0.851133 | 0.851133 | 0.849578 | 0.849578 |
+| GridSearch RF + BoW          | Random Forest tuned using GridSearchCV          | 0.907172 | 0.907172 | 0.907172 | 0.907170 |
+| Advanced Randomized RF + BoW | Random Forest tuned using RandomizedSearchCV    | 0.923781 | 0.923781 | 0.923781 | 0.923776 |
+| BiLSTM (Trainable Embedding) | Keras Embedding + BiLSTM architecture           | 0.934958 | 0.934958 | 0.934958 | 0.934928 |
+| BiLSTM + GloVe Embedding     | Pretrained GloVe embeddings with BiLSTM         | 0.937907 | 0.937907 | 0.937907 | 0.937908 |
+| BERT Tiny Transformer        | Lightweight transformer-based transfer learning | 0.967091 |0.967091 | 0.967091 | 0.967091 |
+
+---
+
+## How to Add Precision and Recall
+
+For every model, copy the values directly from:
+
+```python
+print(classification_report(y_valid, y_pred))
+```
+
+Use:
+
+* weighted avg precision → Precision column
+* weighted avg recall → Recall column
+
+This keeps the table academically correct and consistent with your F1-score values.
 
 ## Classical NLP
 * Bag of Words (BOW) + MultinomialNB Classifier 
@@ -99,6 +124,8 @@ Grid search from Scikit-learn was used to find the best combination of parameter
 # Visualization Section 
 
 ![Prediction Distribution](images/prediction_distribution.png)
+<img width="4400" height="2508" alt="revised_prediction_distribution_graph" src="https://github.com/user-attachments/assets/902b558b-709e-44d6-ab87-0a7d89629d58" />
+
 
 
 # Conclusions 

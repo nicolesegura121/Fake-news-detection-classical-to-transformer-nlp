@@ -47,14 +47,21 @@ I improved the CNN architecture through multiple experiments, with step-by-step 
 
 # Classical NLP Section 
 
+
 # Embedding Section 
+Embeddings are dense vector representations produced after a parameterization with pretrained model weights. In this work, we explore the effect of embeddings to expand the semantical relation of the training data with a classical NLP pipeline.
+
 
 # Transformer Section 
 
+Models were sourced from the Hugging Face portal, and the main parameters for choice were: small parameter size (< 6 billion), and most downloaded models. 
+Model 1: 
+Model 2: 
+Model 3: The Roberta Fake News Detector model is a fine-tuned version of the "Fake-News-Bert-Detect" model, trained by 8000 news articles from the https://euvsdisinfo.eu/ portal. The model uses only 512 words, making it ideal for a dataset of headlines. 
 
 # Hyperparameter Tuning 
 
-
+Grid search from Scikit-learn was used to find the best combination of parameters for the classifier.  
 
 # Results Table 
 
@@ -71,7 +78,14 @@ I improved the CNN architecture through multiple experiments, with step-by-step 
 | Sentence Transformer + LinearSVC| default | 0.93 | 0.91 | 0.94 | 0.93 | 
 | Sentence Transformer + LinearSVC| C = 10 | 0.92 | 0.91 | 0.94 | 0.93 | 
 | Sentence Transformer + LinearSVC| C = 100 | 0.92 | 0.91 | 0.94 | 0.93 | 
-| DistilBERT | default | 0.9618 | 0.9474 | 0.9784 | 0.9626 | 
+| DistilBERT | default | 0.9618 | 0.9474 | 0.9784 | 0.9626 |
+|SVC+TF-IDF | Baseline| 0.82|0.93 |0.91 |0.92 |
+|SVC+TF-IDF | n_grams(1,2), max_df = 80%| 0.935|0.95 |0.92 |0.93 |
+|SVC+TF-IDF | n_grams(1,2), min_df = 3| 0.936|0.95 |0.92 |0.93 |
+|SVC+TF-IDF | n_grams(1,2), min_df = 3, SVC(C=10,gamma=1, Kernel="linear")| 0.923|0.93 |0.91 |0.92 |
+|SVC+Qwen3(embedding) | n_grams(1,2), min_df = 3, SVC(C=10,gamma=1, Kernel="linear")| 0.916|0.92 |0.91 |0.92 |
+|SVC+BGEsmallv1.5(embedding) | n_grams(1,2), min_df = 3, SVC(C=10,gamma=1, Kernel="linear")| 0.917|0.92 |0.91 |0.92 |
+|RoBerta-Fake-NewsDetector | Fine Tuned with Trainer| 0.966|0.97 |0.96 |0.97 |
 
 ## Classical NLP
 * Bag of Words (BOW) + MultinomialNB Classifier 

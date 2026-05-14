@@ -2,17 +2,17 @@
 
 ## Group Project
 
-This project explores multiple Natural Language Processing (NLP) approaches for fake news classification, ranging from classical Bag of Words and TF-IDF methods to sentence embeddings and transformer-based models such as DistilBERT.
+This group project investigates fake news detection using a wide range of Natural Language Processing (NLP), Machine Learning, and Deep Learning techniques. The project compares traditional text classification methods with modern embedding-based and transformer-based approaches to evaluate their effectiveness in identifying fake and real news articles.
 
 ---
 
 # Team Members
 
-| Member | Model Focus | GitHub |
-|---|---|---|
-| Alan An Jung Wei | --- | [alananjungwei](https://github.com/alananjungwei) |
-| Laxmi Gupte | --- | [laxmigs24](https://github.com/laxmigs24) |
-| Nicole Segura | --- | [nicolesegura121](https://github.com/nicolesegura121) |
+| Member |  GitHub |
+|---|---|
+| Alan An Jung Wei | [alananjungwei](https://github.com/alananjungwei) |
+| Laxmi Gupte |  [laxmigs24](https://github.com/laxmigs24) |
+| Nicole Segura |  [nicolesegura121](https://github.com/nicolesegura121) |
 
 ---
 
@@ -28,7 +28,7 @@ This project explores multiple Natural Language Processing (NLP) approaches for 
 
 # Dataset
 
-The dataset consists of news headlines/articles labeled as:
+The training dataset consists of news headlines/articles labeled as:
 - 0 → fake news
 - 1 → real news
 
@@ -37,12 +37,15 @@ The testing dataset contained placeholder labels (2), which were replaced using 
 ---
 
 # Workflow Overview 
-I improved the CNN architecture through multiple experiments, with step-by-step optimization.
 
 
 # Data Cleaning Section 
 
-
+* Loading and organizing the training and testing datasets
+* Renaming columns for consistency (labal, text)
+* Checking for missing values, dupicated rows, and data imbalance
+* Cleaning text by lowercasing, removing punctuation, removing stopwords, tokenization, lemmatization, and removing unncessary symbols and whitespace
+* Performing exploratory data analysis (EDA) to understand class distribution, text patterns, and frequent words 
 
 
 # Classical NLP Section 

@@ -35,6 +35,20 @@ The training dataset consists of news headlines/articles labeled as:
 The testing dataset contained placeholder labels (2), which were replaced using model predictions.
 
 ---
+# Getting Started 
+
+- The notebook uses basic libraries like pandas and numpy.
+- Scikitlearn libraries are used for model evaluation
+- Install nltk:
+
+ ```
+# Download NLTK resources
+nltk.download('punkt')
+nltk.download('stopwords')
+```
+- For the sentence transormers and model transformers please refer to the model's entry in HuggingFace for details on download instructions.
+
+---
 
 # Workflow Overview 
 
